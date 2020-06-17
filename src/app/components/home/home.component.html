@@ -1,1 +1,19 @@
-<p *ngFor="let game of games">{{game.name}}</p>
+<div class="body">
+  <div class="loading" *ngIf="!ready"><img src="../assets/loading.gif"></div>
+
+  <header class="header">
+    <h1 class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/640px-International_Pok%C3%A9mon_logo.svg.png" alt="Logo Pokemon">
+    </h1>
+
+    <div>
+      <nav class="main-nav">
+        <ul class="link list">
+          <li *ngFor="let gen of gens" [class.selected]="genSelected && genSelected.id == gen.id">
+            <a href="#" (click)="selectGen(gen)">{{gen.names[0].name}}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+</div>

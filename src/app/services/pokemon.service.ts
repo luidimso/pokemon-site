@@ -14,12 +14,25 @@ export class PokemonService {
     private http: HttpClient
   ) { }
 
-  public getGames():Observable<any>{
+  public getGens():Observable<any>{
     const headers:HttpHeaders =  new HttpHeaders()
     .set('content-type', 'application/json')
 
     return this.http.get(env.url+'generation', {headers}).map((response:any)  => {
       return response.results;
+    }).catch((error) => {
+      return throwError(error);
+    });
+  }
+
+
+
+  public getGen(url:string):Observable<any>{
+    const headers:HttpHeaders =  new HttpHeaders()
+    .set('content-type', 'application/json')
+
+    return this.http.get(url, {headers}).map((response:any)  => {
+      return response;
     }).catch((error) => {
       return throwError(error);
     });
