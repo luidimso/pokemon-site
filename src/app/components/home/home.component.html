@@ -22,6 +22,15 @@
   <main *ngIf="genSelected">
     <h1>{{genSelected.main_region.name}}</h1>
 
+    <div class="searchBox" *ngIf="genSelected.pokemon_species.length == pokemons.length">
+      <div class="search">
+        <input type="text" class="searchInput" placeholder="Number or name...">
+        <button type="submit" class="searchButton">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
     <div class="loading-pokemons" *ngIf="genSelected.pokemon_species.length != pokemons.length">
       <img src="../assets/loading.gif">
     </div>
