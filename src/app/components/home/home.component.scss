@@ -1,6 +1,8 @@
 *, :before, :after{ box-sizing: border-box; }
 
-$sans: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+@import url(//db.onlinewebfonts.com/c/51ba22ae06790efd464bde752a2cd9d1?family=Flexo);
+
+$sans: "Flexo", Helvetica, Arial, sans-serif;
 
 $yeallow: #FFCB05;
 $gray: #35302D;
@@ -51,7 +53,9 @@ $white: #DFDBD9;
 
 .header {
   position: fixed;
-  left: 0; top: 0; bottom: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
   width: 17.5em;
   background: $gray;
 }
@@ -91,7 +95,7 @@ $white: #DFDBD9;
 }
 
 
-.list{
+.list {
   li {
     position: relative;
     overflow: hidden;
@@ -106,7 +110,7 @@ $white: #DFDBD9;
 }
 
 
-.selected:before{
+.selected:before {
   content: '';
   display: block;
   z-index: -1;
@@ -118,4 +122,30 @@ $white: #DFDBD9;
   border-right: solid 5px $yeallow;
   background: $gray-light;
   transition: .35s ease left;
+}
+
+
+main {
+  font-family: $sans;
+  padding-left: 18em;
+  height: 100%;
+
+  h1 {
+    text-align: center;
+    font-size: 5em;
+    text-transform: capitalize;
+  }
+
+  .loading-pokemons {
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 5em;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }

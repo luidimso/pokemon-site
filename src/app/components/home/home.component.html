@@ -1,6 +1,7 @@
 <div class="body">
   <div class="loading" *ngIf="!ready"><img src="../assets/loading.gif"></div>
 
+
   <header class="header">
     <h1 class="logo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/640px-International_Pok%C3%A9mon_logo.svg.png" alt="Logo Pokemon">
@@ -16,4 +17,17 @@
       </nav>
     </div>
   </header>
+
+
+  <main *ngIf="genSelected">
+    <h1>{{genSelected.main_region.name}}</h1>
+
+    <div class="loading-pokemons" *ngIf="genSelected.pokemon_species.length != pokemons.length">
+      <img src="../assets/loading.gif">
+    </div>
+
+    <section *ngIf="genSelected.pokemon_species.length == pokemons.length">
+      <p *ngFor="let pokemon of pokemons">{{pokemon.name}}</p>
+    </section>
+  </main>
 </div>

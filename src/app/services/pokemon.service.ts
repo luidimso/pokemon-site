@@ -37,4 +37,17 @@ export class PokemonService {
       return throwError(error);
     });
   }
+
+
+
+  public getPokemon(url:string):Observable<any>{
+    const headers:HttpHeaders =  new HttpHeaders()
+    .set('content-type', 'application/json')
+
+    return this.http.get(url, {headers}).map((response:any)  => {
+      return response;
+    }).catch((error) => {
+      return throwError(error);
+    });
+  }
 }
