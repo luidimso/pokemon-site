@@ -27,7 +27,13 @@
     </div>
 
     <section *ngIf="genSelected.pokemon_species.length == pokemons.length">
-      <p *ngFor="let pokemon of pokemons">{{pokemon.name}}</p>
+      <div *ngFor="let pokemon of pokemons" class="card">
+        <div class="frame-img">
+          <img src="{{pokemon.sprites.front_default}}">
+        </div>
+        <h4>#{{pokemon.id}} - {{pokemon.species.name}}</h4>
+        <p><span class="type {{type.type.name}}" *ngFor="let type of pokemon.types">{{type.type.name}}</span></p>
+      </div>
     </section>
   </main>
 </div>

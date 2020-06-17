@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
   setPokemons(gen:any){
     this.pokemons = [];
     for(let pokemon of gen.pokemon_species){
-      this.pokemonService.getPokemon(pokemon.url).subscribe((p) => {
+      this.pokemonService.getPokemon(pokemon.url.replace("-species", "")).subscribe((p) => {
         this.pokemons.push(p);
         this.defaultPokemonSort();
       });
@@ -71,7 +71,7 @@ export class HomeComponent implements OnInit {
   defaultPokemonSort(){
     if(this.genSelected.pokemon_species.length == this.pokemons.length){
       this.pokemons.sort((a, b) => {
-        return a.order <= b.order ? -1 : 1;
+        return a.id <= b.id ? -1 : 1;
       });
     }
   }

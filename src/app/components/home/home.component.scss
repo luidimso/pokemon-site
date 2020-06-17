@@ -148,4 +148,138 @@ main {
       transform: translate(-50%, -50%);
     }
   }
+
+  section {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .card {
+      background-color: white;
+      border-radius: 1em;
+      border: 2px solid #2C6DB2;
+      width: 17.5em;
+      float: left;
+      margin: 1em;
+      transition: transform .2s;
+
+      &:hover{
+        -ms-transform: scale(1.05); /* IE 9 */
+        -webkit-transform: scale(1.05); /* Safari 3-8 */
+        transform: scale(1.05);
+      }
+
+      h4 {
+        text-align: center;
+        text-transform: capitalize;
+      }
+
+      .frame-img {
+        width: 100%;
+        height: 17.5em;
+        position: relative;
+
+        img {
+          position: absolute;
+          width: 14em;
+          height: auto;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+
+      .type {
+        height: 2em;
+        padding: 0.6em 1.1em 0.5em 1.1em;
+        border-radius: 1em;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: white;
+        margin: 0.3em;
+      }
+    }
+
+  }
+}
+
+
+
+$bug: #879607;
+$dark: #372A21;
+$dragon: #7562D8;
+$electric: #EFBB2A;
+$fairy: #EBACE1;
+$fighting: #763323;
+$fire: #C52608;
+$flying: #5A6ACA;
+$ghost: #5B5BB5;
+$grass: #48921F;
+$ground: #CBAA5B;
+$ice: #6FCFF9;
+$normal: #C4C0B4;
+$poison: #904691;
+$psychic: #EF4880;
+$rock: #A08639;
+$steel: #8C8E9A;
+$water: #1162B3;
+
+.bug {
+  background-color: $bug;
+}
+.dark {
+  background-color: $dark;
+}
+.dragon {
+  background-color: $dragon;
+}
+.electric {
+  background-color: $electric;
+}
+.fairy {
+  background-color: $fairy;
+}
+.fighting {
+  background-color: $fighting;
+}
+.fire {
+  background-color: $fire;
+}
+.flying {
+  background-color: $flying;
+}
+.ghost {
+  background-color: $ghost;
+}
+.grass {
+  background-color: $grass;
+}
+.ground {
+  background-color: $ground;
+}
+.ice {
+  background-color: $ice;
+}
+.normal {
+  background-color: $normal;
+}
+.poison {
+  background-color: $poison;
+}
+.psychic {
+  background-color: $psychic;
+}
+.rock {
+  background-color: $rock;
+}
+.steel {
+  background-color: $steel;
+}
+.water {
+  background-color: $water;
 }
