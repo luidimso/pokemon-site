@@ -16,16 +16,24 @@ First, install the Angular CLI using NPM.
 ```npm install -g @angular/cli```
 
 Check that the Angular CLI has been installed correctly
-```ng version```
+```
+ng version
+```
 
 After the installation is finished, clone this project and enter the project directory
-```git clone https://github.com/luidimso/pokemon-site.git```
-cd pokemon-site```
+```
+git clone https://github.com/luidimso/pokemon-site.git
+cd pokemon-site
+```
 
 Install the packages and application dependencies
-```npm i```
+```
+npm i
+```
 
 With everything installed, we can now start the application server
-```ng serve```
+```
+ng serve
+```
 
 The application will be running at the address `http://localhost:4200/`
