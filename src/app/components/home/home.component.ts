@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   gens:any[] = [];
   genSelected:any;
   pokemons:any[] = [];
+  pokemonsAux:any[] = [];
+  filtered:boolean = false;
 
   constructor(
     private pokemonService: PokemonService
@@ -50,7 +52,8 @@ export class HomeComponent implements OnInit {
 
 
   selectGen(gen:any){
-    if(gen.id != this.genSelected.id && this.genSelected.pokemon_species.length == this.pokemons.length){
+    if(gen.id != this.genSelected.id && this.genSelected.pokemon_species.length == this.pokemons.length || (this.genSelected.pokemon_species.length != this.pokemons.length && this.filtered)){
+      this.filtered = false;
       this.genSelected = gen;
       this.setPokemons(gen);
     }
@@ -72,6 +75,18 @@ export class HomeComponent implements OnInit {
     if(this.genSelected.pokemon_species.length == this.pokemons.length){
       this.pokemons.sort((a, b) => {
         return a.id <= b.id ? -1 : 1;
+      });
+      this.pokemonsAux = this.pokemons;
+    }
+  }
+
+
+  filterPokemons(text:string) {
+    if (text && text.trim() !== '') {
+      this.pokemons = this.pokemonsAux;
+      this.filtered = true;
+      this.pokemons = this.pokemons.filter((pokemon) => {
+        return (pokemon.species.name.indexOf(text.toLowerCase())>-1 || pokemon.id == Number(text));
       });
     }
   }

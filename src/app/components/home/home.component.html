@@ -21,21 +21,22 @@
 
   <main *ngIf="genSelected">
     <h1>{{genSelected.main_region.name}}</h1>
+    <h3>{{genSelected.pokemon_species.length}} pokemons</h3>
 
-    <div class="searchBox" *ngIf="genSelected.pokemon_species.length == pokemons.length">
+    <div class="searchBox" *ngIf="genSelected.pokemon_species.length == pokemons.length || filtered">
       <div class="search">
-        <input type="text" class="searchInput" placeholder="Number or name...">
-        <button type="submit" class="searchButton">
+        <input type="text" class="searchInput" placeholder="Number or name..." #search>
+        <button type="submit" class="searchButton" (click)="filterPokemons(search.value)">
           <i class="fa fa-search" aria-hidden="true"></i>
         </button>
       </div>
     </div>
 
-    <div class="loading-pokemons" *ngIf="genSelected.pokemon_species.length != pokemons.length">
+    <div class="loading-pokemons" *ngIf="genSelected.pokemon_species.length != pokemons.length && !filtered">
       <img src="../assets/loading.gif">
     </div>
 
-    <section *ngIf="genSelected.pokemon_species.length == pokemons.length">
+    <section *ngIf="genSelected.pokemon_species.length == pokemons.length || filtered">
       <div *ngFor="let pokemon of pokemons" class="card">
         <div class="frame-img">
           <img src="{{pokemon.sprites.front_default}}">
