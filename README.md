@@ -1,27 +1,31 @@
-# PokemonSite
+# Pokemon Hub
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Introduction
+This project was developed in response to the Delivery Much front-end challenge. The project consists of developing a website to list the generations of Pokémon games and their information using [PokeAPI](https://pokeapi.co/).
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prerequisites
+To start installing Angular in the environment, it is necessary that [NodeJS](https://nodejs.org/) and NPM package manager are installed.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Running application
+First, install the Angular CLI using NPM.
+`npm install -g @angular/cli`
 
-## Running unit tests
+Check that the Angular CLI has been installed correctly
+`ng version`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+After the installation is finished, clone this project and enter the project directory
+`git clone https://github.com/luidimso/pokemon-site.git`
+`cd pokemon-site`  
 
-## Running end-to-end tests
+Install the packages and application dependencies
+`npm i`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+With everything installed, we can now start the application server
+`ng serve`
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The application will be running at the address `http://localhost:4200/`
