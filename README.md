@@ -13,7 +13,9 @@ To start installing Angular in the environment, it is necessary that [NodeJS](ht
 
 ## Running application
 First, install the Angular CLI using NPM.
-```npm install -g @angular/cli```
+```
+npm install -g @angular/cli
+```
 
 Check that the Angular CLI has been installed correctly
 ```
