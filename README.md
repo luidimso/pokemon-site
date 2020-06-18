@@ -8,7 +8,7 @@ This project was developed in response to the Delivery Much front-end challenge.
 
 
 ## Prerequisites
-To start installing Angular in the environment, it is necessary that [NodeJS](https://nodejs.org/) and NPM package manager are installed.
+To start installing Angular in the environment, it is necessary that [NodeJS](https://nodejs.org/) and NPM package manager are installed. NodeJS must be version 10.13 or higher.
 
 
 ## Running application
