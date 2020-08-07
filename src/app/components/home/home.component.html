@@ -3,18 +3,21 @@
 
 
   <header class="header">
-    <h1 class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/640px-International_Pok%C3%A9mon_logo.svg.png" alt="Logo Pokemon">
-    </h1>
+    <div class="header-div">
+      <h1 class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/640px-International_Pok%C3%A9mon_logo.svg.png" alt="Logo Pokemon">
+      </h1>
 
-    <div>
-      <nav class="main-nav">
-        <ul class="link list">
-          <li *ngFor="let gen of gens" [class.selected]="genSelected && genSelected.id == gen.id">
-            <a href="#" (click)="selectGen(gen)">{{gen.names[0].name}}</a>
-          </li>
-        </ul>
-      </nav>
+      <div>
+        <nav class="main-nav">
+          <ul class="link list">
+            <li *ngFor="let gen of gens" [class.selected]="genSelected && genSelected.id == gen.id">
+              <a class="generation-link" href="#" (click)="selectGen(gen)">{{gen.names[0].name}}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <p>Developed by <a target="_blank" href="https://www.linkedin.com/in/luidi-matheus-554552157/">Luidi Matheus</a></p>
     </div>
   </header>
 
