@@ -1,5 +1,5 @@
 <div class="body">
-  <div class="loading" *ngIf="!ready"><img src="../assets/loading.gif"></div>
+  <div class="loading" *ngIf="!ready"><img src="./assets/loading.gif"></div>
 
 
   <header class="header">
@@ -33,7 +33,7 @@
     </div>
 
     <div class="loading-pokemons" *ngIf="genSelected.pokemon_species.length != pokemons.length && !filtered">
-      <img src="../assets/loading.gif">
+      <img src="./assets/loading.gif">
     </div>
 
     <section *ngIf="genSelected.pokemon_species.length == pokemons.length || filtered">
