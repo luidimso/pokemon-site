@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 
 ## Introduction
-This project was developed in response to the Delivery Much front-end challenge. The project consists of developing a website to list the generations of Pokémon games and their information using [PokeAPI](https://pokeapi.co/).
+This project can be viewed [here](https://luidimso.github.io/pokemon-site/). The project consists of developing a website to list the generations of Pokémon games and their information using [PokeAPI](https://pokeapi.co/).
 
 
 ## Prerequisites
